@@ -15,6 +15,24 @@
     <meta charset="UTF-8">
     <!-- 브라우저의 제목을 나타냄 -->
     <title>나를 소개합니다</title>
+    <link href = "./style.css" rel="stylesheet" >
+    <style>
+    table {
+    /* 셀 사이의 경계를 한 줄로 */
+    border-collapse: collapse;
+    /* 가운데 배치(수평) */
+    margin: auto;
+
+    }
+
+    td, th {
+    /* 테두리, 1px는 두께. solid는 실선 */
+    border: 1px solid black;
+    padding: 10px;
+    /* 글자 가운데 정렬 */
+    text-align: center;
+    }
+    </style>
 </head>
 
 <!-- 실제 내용이 들어가는 부분 -->
@@ -22,7 +40,7 @@
 <body>
     <!-- 주제,제목을 나타냄(heading) -->
     <!-- h의 숫자가 커질수록 글자의 크기는 작아진다 -->
-    <h1>나를 소개합니다</h1>
+    <h1 id = "heading">나를 소개합니다</h1>
 
     <!-- 그림 불러오기 src:불러올 파일, alt:그림 불러올기를 실패했을 때 대체되는 글자 -->
     <!-- src, alt와 같은 속성은 태그의 세부적인 정보를 제공한다 -->
@@ -31,20 +49,20 @@
     <!-- 순서가 없는 목록 (Unordered List) -->
     <ul>
         <!-- 목록(list) <li>는 <ol> 혹은 <ul>과 같이 사용한다 -->
-        <li>독서</li>
-        <li>영화감상</li>
-        <li>음악감상</li>
+            <li class = "hobby">독서</li>
+            <li class = "hobby">영화감상</li>
+            <li class = "hobby">음악감상</li>
     </ul>
 
     <h2>좋아하는 음식순위</h2>
     <!-- 순서가 있는 목록 (Ordered List) -->
     <ol>
-        <li>마라탕</li>
-        <li>초밥</li>
-        <li>육회</li>
+        <li class = "food">초밥</li>
+        <li class = "food">마라탕</li>
+        <li class = "food">육회</li>
     </ol>
 
-    <h2>내가 자주 가는 사이트</h2>
+    <h2 style = "color:crimson;">내가 자주 가는 사이트</h2>
 
     <!-- 행을 먼저 만들고 열을 만든다다 -->
     <table>
@@ -74,6 +92,10 @@
             <td>넷플릭스</td>
             <td>https://www.netflix.com/</td>
             <td>OTT</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">자료제공 JWP</td>
         </tr>
 
     </table>
